@@ -120,11 +120,11 @@ ol {
 }
 
  .search-form__textfield:focus {
-  border: 0;
+  outline: none;
  }
- .search-form__textfield:has(:focus-visible) {
+ .search-form__textfield:focus-visible {
   outline: 2px solid #FFF;
-  outline-offset: 2px;
+  outline-offset: 2px; /*Пофиксить!!!*/
  }
 
 .search-form__checkbox-list {
@@ -162,11 +162,40 @@ ol {
 
 .search-form__label:hover:has(.search-form__pseudo-checkbox + .search-form__label-text) {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-.search-form__label:focus-visible:has(.search-form__pseudo-checkbox + .search-form__label-text) {
+.search-form__label:focus-visible {
+  outline: 2px solid #FFF;
+  outline-offset: 2px; /*Решить проблему с focus-visible*/
+}
+
+.button {
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 700;
+  color:#FFF;
+  background-color: inherit;
+  border: 1px solid white;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
   outline: 2px solid #FFF;
   outline-offset: 2px;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  padding: 6px 73.5px 6px 73.5px;
 }
 
 .title {
@@ -229,7 +258,7 @@ ol {
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
 }
 
@@ -237,6 +266,11 @@ ol {
   min-width: 194px;
   height: 103px;
   object-fit: fill;
+}
+
+.more-button {
+  width: 100%;
+  padding: 6px 0 6px 0px;
 }
 
 /* Кастомный скроллбар */
