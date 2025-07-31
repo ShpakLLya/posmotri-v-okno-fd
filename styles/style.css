@@ -75,6 +75,7 @@ ol {
 }
 
 .result__video-container {
+  position:relative;
   width: 710px;
   height: 380px;
 }
@@ -211,6 +212,7 @@ ol {
 }
 
 .content__list-container {
+  position:relative;
   display: flex;
   flex-direction: column;
   gap: 30px;
