@@ -78,12 +78,14 @@ ol {
   position:relative;
   width: 710px;
   height: 380px;
+  
 }
 
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -105,6 +107,8 @@ ol {
 }
 
 .search-form__textfield {
+  width: 225px;
+  height: 25px;
   background-color: inherit;
   color: #FFFFFF;
   border: 0;
@@ -120,10 +124,11 @@ ol {
   color: rgba(255, 255, 255 / 0.7);
 }
 
- .search-form__textfield:focus {
+ .search-form__label:has(.search-form__textfield:focus) {
   outline: none;
  }
- .search-form__textfield:focus-visible {
+ 
+ .search-form__label:has(.search-form__textfield:focus-visible) {
   outline: 2px solid #FFF;
   outline-offset: 2px; /*Пофиксить!!!*/
  }
@@ -166,9 +171,13 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:focus-visible {
+.search-form__label:has(.search-form__checkbox:focus) {
+  outline: none;
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 2px solid #FFF;
-  outline-offset: 2px; /*Решить проблему с focus-visible*/
+  outline-offset: 2px; 
 }
 
 .button {
@@ -216,7 +225,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  overflow-y: scroll;
+  overflow: auto;
   height: 300px;
 }
 
@@ -227,7 +236,7 @@ ol {
 }
 
 .content__list-item {
-  padding: 3px 3px 0 3px;
+  padding: 0px 3px 0 3px;
 }
 
 .content__card-link {
@@ -263,7 +272,6 @@ ol {
 .content__video-card-description-container {
   flex-grow: 2;
   color: #FFFFFF;
-  
 }
 
 .content__video-card-title {
@@ -271,6 +279,7 @@ ol {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 100%;
   width: 202px;
   overflow: hidden;
   white-space: nowrap;
