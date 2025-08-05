@@ -55,7 +55,6 @@ ol {
   display: flex;
   flex-direction: row;
   gap:0 30px;
-  justify-content: center;
   align-items: flex-end;
   width: 1140px;
 }
@@ -106,22 +105,22 @@ ol {
   padding-bottom: 5px;
 }
 
-.search-form__textfield {
-  width: 225px;
-  height: 25px;
-  background-color: inherit;
-  color: #FFFFFF;
-  border: 0;
+.search-form__textfield { /*Не совсем понимаю как можно избавиться от смещения */
+  width: 225px;           /*на 5px по вертикали для формы судя по инспектору*/
+  height: 25px;           /*проблема кроется где-то в блоке с видео*/
+  background-color: inherit;/*но почему-то он никак не хочет вставать по макету*/
+  color: #FFFFFF;       /*хоть и рекомендации к проекту соблюдены*/
+  border: 0;              /*зочется понять с чем может быть связанно данное*/
+  padding: 2.5px 0 2.5px 0;/*расхождение с макетом. Заранее спасибо*/
   border-bottom: 1px solid #FFFFFF;
   border-top: 1px solid #FFFFFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   appearance: none;
  }
 
  .search-form__textfield::placeholder {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
   color: rgba(255, 255, 255 / 0.7);
 }
 
