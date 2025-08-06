@@ -105,13 +105,13 @@ ol {
   padding-bottom: 5px;
 }
 
-.search-form__textfield { /*Не совсем понимаю как можно избавиться от смещения */
-  width: 225px;           /*на 5px по вертикали для формы судя по инспектору*/
-  height: 25px;           /*проблема кроется где-то в блоке с видео*/
-  background-color: inherit;/*но почему-то он никак не хочет вставать по макету*/
-  color: #FFFFFF;       /*хоть и рекомендации к проекту соблюдены*/
-  border: 0;              /*зочется понять с чем может быть связанно данное*/
-  padding: 2.5px 0 2.5px 0;/*расхождение с макетом. Заранее спасибо*/
+.search-form__textfield {
+  width: 225px;
+  height: 25px;
+  background-color: inherit;
+  color: #FFFFFF;
+  border: 0;             
+  padding: 2.5px 0 2.5px 0;
   border-bottom: 1px solid #FFFFFF;
   border-top: 1px solid #FFFFFF;
   font-family: 'Fira Sans Condensed', sans-serif;
